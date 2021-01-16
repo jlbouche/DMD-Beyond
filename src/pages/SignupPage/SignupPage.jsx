@@ -14,6 +14,7 @@ export default function SignUpPage(props){
     email: '',
     password: '',
     passwordConf: '',
+    zipcode: '',
     bio: ''
   });
 
@@ -75,7 +76,7 @@ export default function SignUpPage(props){
         <>
         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
           <Grid.Column style={{ maxWidth: 450 }}>
-              <Header as='h2' color='teal' textAlign='center'>
+              <Header as='h2' color='red' textAlign='center'>
                 <Image src='https://miro.medium.com/max/265/1*rXDOgxfiljrdY1gS-YWEIg.png' /> Sign Up    
               </Header>            
                 <Form autoComplete="off"  onSubmit={handleSubmit}>
