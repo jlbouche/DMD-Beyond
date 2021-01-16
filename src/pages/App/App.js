@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
+import 'semantic-ui-css/semantic.min.css';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
-import ProfilePage from '../ProfilePage/ProfilePage'
-import userService from '../../utils/userService'
+import ProfilePage from '../ProfilePage/ProfilePage';
+import userService from '../../utils/userService';
 import HomePage from '../HomePage/HomePage';
 
 function App() {
