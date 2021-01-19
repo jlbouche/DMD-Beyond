@@ -38,18 +38,10 @@ export default function SignUpPage(props){
     formData.append('photo', selectedFile);
 
 
-    // generating rest of form data by looping over the state object!
     for (let key in state){
       formData.append(key, state[key])
     }
-    //fyi if you log out formData you won't see anything you have to use the folllowing
 
-    // Display the key/value pairs
-    // for (var pair of formData.entries()) {
-    //   console.log(pair[0]+ ', ' + pair[1]); 
-    // }
-
-    // SO now we have are data prepared to send over in our formData object
     try {
       // refere to the utils/userService, to look at the signup fetch function
       await userService.signup(formData);
@@ -76,8 +68,8 @@ export default function SignUpPage(props){
         <>
         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
           <Grid.Column style={{ maxWidth: 450 }}>
-              <Header as='h2' color='red' textAlign='center'>
-                <Image src='https://miro.medium.com/max/265/1*rXDOgxfiljrdY1gS-YWEIg.png' /> Sign Up    
+              <Header as='h2' color='teal' textAlign='center'>
+                <Image src='https://i.imgur.com/s4LrnlU.png' /> Sign Up    
               </Header>            
                 <Form autoComplete="off"  onSubmit={handleSubmit}>
                 <Segment stacked>               
@@ -112,15 +104,15 @@ export default function SignUpPage(props){
                       onChange={handleChange}
                       required
                     />
-                    <Form.Input
-                      type="zipcode"                  
+                    <Form.Input 
                       name="zipcode"
+                      type="zipcode"
                       placeholder="zipcode"
                       value={ state.zipcode}
-                      onChange={handleChange}
+                      onchange={handleChange}
                       required
                     />
-                    <Form.TextArea label='bio' placeholder='Tell us more about yourself!' name="bio" onChange={handleChange}/>
+                    <Form.TextArea label='bio' placeholder='Tell us more about your dogs...' name="bio" onChange={handleChange}/>
                     <Form.Field> 
                         <Form.Input
                           type="file"
