@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PageHeader from '../../components/Header/Header';
 import {  Grid } from 'semantic-ui-react'
 
-export default function HomePage(user, handleLogout){
+export default function HomePage({user, handleLogout}){
     return (
       <Grid centered >
         <Grid.Row>
