@@ -50,7 +50,6 @@ export default function LoginPage(props){
                <Segment stacked>
                   <Form.Input
                     type="email"
-                   
                     name="email"
                     placeholder="email"
                     value={ state.email}

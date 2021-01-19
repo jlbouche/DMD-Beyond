@@ -19,7 +19,7 @@ export default function ProfilePage({ user, handleLogout }) {
         try {
 
             const username = location.pathname.substring(1)
-            // location.pathname returns /jimbo so we need to cut off the / using the js method substring
+            // location.pathname returns /username so we need to cut off the / using the js method substring
             // This gets the username from the url! 
             console.log(username)
             const data = await userService.getProfile(username);

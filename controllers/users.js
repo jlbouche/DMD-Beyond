@@ -55,8 +55,7 @@ async function login(req, res) {
 async function profile(req, res){
   try {
     const user = await User.findOne({username: req.params.username})
-    const posts = await Post.find({user: user._id});
-    res.status(200).json({posts: posts, user: user})
+    res.status(200).json({user: user})
   } catch(err){
     return res.status(401).json(err)
   }
