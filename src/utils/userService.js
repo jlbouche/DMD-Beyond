@@ -5,7 +5,7 @@ const BASE_URL = '/api/users/';
 function signup(user) {
   return fetch(BASE_URL + 'signup', {
     method: 'POST',
-    body: JSON.stringify(user)
+    body: user
   })
   .then(res => {
     if (res.ok) return res.json();

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  'mongodb://localhost:27017/dmdbeyond',
+  'mongodb://localhost:27017/dmdbeyond1',
   { useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,

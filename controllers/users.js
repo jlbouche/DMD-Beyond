@@ -12,6 +12,8 @@ module.exports = {
 };
 
 function signup(req, res) {
+  console.log('hitting signup router')
+  console.log(req.body, req.file)
   
   const filePath = `${uuidv4()}/${req.file.originalname}`
   const params = {Bucket: 'jbcatcollector', Key: filePath, Body: req.file.buffer};

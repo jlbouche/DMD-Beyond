@@ -28,11 +28,8 @@ export default function SignUpPage(props){
   }
 
   async function handleSubmit(e){
-    // add this later
-    e.preventDefault();
 
-    // Photos have to be sent over as FormData
-    // They send over the form in multiparts (multipe requests to the server)
+    e.preventDefault();
 
     const formData = new FormData();
     formData.append('photo', selectedFile);
@@ -69,7 +66,7 @@ export default function SignUpPage(props){
         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
           <Grid.Column style={{ maxWidth: 450 }}>
               <Header as='h2' color='teal' textAlign='center'>
-                <Image src='https://i.imgur.com/s4LrnlU.png' /> Sign Up    
+                <Image src='https://miro.medium.com/max/265/1*rXDOgxfiljrdY1gS-YWEIg.png' /> Sign Up    
               </Header>            
                 <Form autoComplete="off"  onSubmit={handleSubmit}>
                 <Segment stacked>               
@@ -104,15 +101,15 @@ export default function SignUpPage(props){
                       onChange={handleChange}
                       required
                     />
-                    <Form.Input 
+                    <Form.Input     
                       name="zipcode"
                       type="zipcode"
                       placeholder="zipcode"
                       value={ state.zipcode}
-                      onchange={handleChange}
+                      onChange={handleChange}
                       required
                     />
-                    <Form.TextArea label='bio' placeholder='Tell us more about your dogs...' name="bio" onChange={handleChange}/>
+                    <Form.TextArea label='bio' placeholder='Tell us more about yourself!' name="bio" onChange={handleChange}/>
                     <Form.Field> 
                         <Form.Input
                           type="file"
