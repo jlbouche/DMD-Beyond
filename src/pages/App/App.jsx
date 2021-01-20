@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import SignupPage from '../SignupPage/SignupPage';
@@ -9,7 +9,7 @@ import HomePage from '../HomePage/HomePage';
 
 function App() {
 
-  const [user, setUser] = useState(userService.getUser())
+  const [user, setUser] = useState(userService.getUser())  
 
   function handleSignUpOrLogin(){
     setUser(userService.getUser()) // getting the user from localstorage decoding the jwt
