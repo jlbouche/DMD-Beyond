@@ -1,0 +1,89 @@
+[
+    {
+        "id": 1,
+        "name": "American",
+        "image_url": ""
+    },
+    {
+        "id": 2,
+        "cuisine_name": "Arabian",
+        "image_url": ""
+    },
+    {
+        "id": 3,
+        "cuisine_name": "Asian",
+        "image_url": ""
+    },
+    {
+      "id": 4,
+      "cuisine_name": "Cafe",
+      "image_url": ""
+    },
+    {
+        "id": 5,
+        "cuisine_name": "Cuban",
+        "image_url": ""
+    },
+    {
+        "id": 6,
+        "cuisine_name": "Fast Food",
+        "image_url": ""
+    },
+    {
+        "id": 7,
+        "cuisine_name": "French",
+        "image_url": ""
+    },
+    {
+        "id": 8,
+        "cuisine_name": "Greek",
+        "image_url": ""
+    },
+    {
+        "id": 9,
+        "cuisine_name": "Healthy Food",
+        "image_url": ""
+    },
+    {
+        "id": 10,
+        "cuisine_name": "Indian",
+        "image_url": ""
+    },
+    {
+        "id": 11,
+        "cuisine_name": "Italian",
+        "image_url": ""
+    },
+    {
+        "id": 12,
+        "cuisine_name": "Mediterranean"
+    },
+    {
+        "id": 13,
+        "cuisine_name": "Mexican"
+    },
+    {
+        "id": 14,
+        "cuisine_name": "Seafood"
+    },
+    {
+        "id": 15,
+        "cuisine_name": "Spanish"
+    },
+    {
+        "id": 16,
+        "cuisine_name": "Steak"
+    },
+    {
+        "id": 17,
+        "cuisine_name": "Sushi"
+    },
+    {
+        "id": 18,
+        "cuisine_name": "Tea"
+    },
+    {
+        "id": 19,
+        "cuisine_name": "Vegetarian"
+    }
+  ]
