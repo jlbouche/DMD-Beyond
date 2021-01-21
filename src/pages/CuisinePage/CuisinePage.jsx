@@ -1,2 +1,2 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useParams, }
+import { Link, useParams } from 'react-router-dom'

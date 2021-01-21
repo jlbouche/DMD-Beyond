@@ -14,7 +14,7 @@ export default function SignUpPage(props){
     email: '',
     password: '',
     passwordConf: '',
-    zipcode: '',
+    city: '',
     bio: ''
   });
 
@@ -102,10 +102,10 @@ export default function SignUpPage(props){
                       required
                     />
                     <Form.Input     
-                      name="zipcode"
-                      type="zipcode"
-                      placeholder="zipcode"
-                      value={ state.zipcode}
+                      name="city"
+                      type="city"
+                      placeholder="city"
+                      value={ state.city}
                       onChange={handleChange}
                       required
                     />
