@@ -2,88 +2,96 @@
     {
         "id": 1,
         "name": "American",
-        "image_url": ""
+        "image_url": "https://i.imgur.com/DUjdeti.jpg"
     },
     {
         "id": 2,
         "cuisine_name": "Arabian",
-        "image_url": ""
+        "image_url": "https://i.imgur.com/6Y5cY8C.jpg"
     },
     {
         "id": 3,
         "cuisine_name": "Asian",
-        "image_url": ""
+        "image_url": "https://i.imgur.com/UbbGXVR.jpg"
     },
     {
       "id": 4,
       "cuisine_name": "Cafe",
-      "image_url": ""
+      "image_url": "https://i.imgur.com/AJRpq59.png"
     },
     {
         "id": 5,
         "cuisine_name": "Cuban",
-        "image_url": ""
+        "image_url": "https://i.imgur.com/WkDNKeC.jpg"
     },
     {
         "id": 6,
         "cuisine_name": "Fast Food",
-        "image_url": ""
+        "image_url": "https://i.imgur.com/AAhe9to.png"
     },
     {
         "id": 7,
         "cuisine_name": "French",
-        "image_url": ""
+        "image_url": "https://i.imgur.com/i2rxa3t.png"
     },
     {
         "id": 8,
         "cuisine_name": "Greek",
-        "image_url": ""
+        "image_url": "https://i.imgur.com/JNZqxav.jpg"
     },
     {
         "id": 9,
         "cuisine_name": "Healthy Food",
-        "image_url": ""
+        "image_url": "https://i.imgur.com/f5U17gI.png"
     },
     {
         "id": 10,
         "cuisine_name": "Indian",
-        "image_url": ""
+        "image_url": "https://i.imgur.com/tz37ty2.jpg"
     },
     {
         "id": 11,
         "cuisine_name": "Italian",
-        "image_url": ""
+        "image_url": "https://i.imgur.com/LSPvCNn.jpg"
     },
     {
         "id": 12,
-        "cuisine_name": "Mediterranean"
+        "cuisine_name": "Mediterranean",
+        "image_url": "https://i.imgur.com/3dFrlEH.jpg"
     },
     {
         "id": 13,
-        "cuisine_name": "Mexican"
+        "cuisine_name": "Mexican",
+        "image_url": "https://i.imgur.com/m8aCFRe.jpg"
     },
     {
         "id": 14,
-        "cuisine_name": "Seafood"
+        "cuisine_name": "Seafood",
+        "image_url": "https://i.imgur.com/akf8Jt5.jpg"
     },
     {
         "id": 15,
-        "cuisine_name": "Spanish"
+        "cuisine_name": "Spanish",
+        "image_url": "https://i.imgur.com/fGlBXdm.jpg"
     },
     {
         "id": 16,
-        "cuisine_name": "Steak"
+        "cuisine_name": "Steak",
+        "image_url": "https://i.imgur.com/e79vwQr.jpg"
     },
     {
         "id": 17,
-        "cuisine_name": "Sushi"
+        "cuisine_name": "Sushi",
+        "image_url": "https://i.imgur.com/XXHIEsx.jpg"
     },
     {
         "id": 18,
-        "cuisine_name": "Tea"
+        "cuisine_name": "Tea",
+        "image_url": "https://i.imgur.com/lcCw2Tl.jpg"
     },
     {
         "id": 19,
-        "cuisine_name": "Vegetarian"
+        "cuisine_name": "Vegetarian",
+        "image_url": "https://i.imgur.com/8jwjwIx.jpg"
     }
   ]
