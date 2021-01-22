@@ -3,6 +3,9 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const favicon = require('serve-favicon');
+const yelp = require('yelp-fusion');
+const token = process.env.APIKEY;
+const client = yelp.client(token);
 
 require('./config/database');
 
@@ -19,12 +22,25 @@ app.use(express.static(path.join(__dirname, 'build'))); // this allows express t
 app.use(require('./config/auth')); 
 // api routes must be before the "catch all" route
 app.use('/api/users', require('./routes/users'));
-app.use('/api/restaurants', require('./routes/api/restaurants'));
 
 // "catch all" route
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+//utilizing api search functionality through server.js to simplify routing/eliminate need for extra components/utils
+app.post('/api/search', function(req, res){
+  const user = req.user;
+  client.search({
+    location: `${user.city}, ${user.state}`,
+    categories: 'restaurants',
+  }).then(response => {
+    const restaurants = response.jsonBody.businesses;
+    const restaurant = restaurants[Math.floor(Math.random()*restaurants.length)];
+    res.send(restaurant);
+  })
+})
+
+
 
 const port = process.env.PORT || 3001;
 
