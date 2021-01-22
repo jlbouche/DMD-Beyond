@@ -12,12 +12,12 @@ export default function HomePage({user, handleLogout}){
         </Grid.Row>
         <Grid.Row>
           <Grid.Column style={{ maxWidth: 450 }}>
-
+            <span>Confirmation HomePage is rendering</span>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
         <Grid.Column style={{maxWidth: 450}}>
-
+            <button>HELP ME DECIDE</button>
         </Grid.Column>
         </Grid.Row>
       </Grid>
