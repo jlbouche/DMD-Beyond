@@ -4,8 +4,8 @@ const path = require('path');
 const logger = require('morgan');
 const favicon = require('serve-favicon');
 const yelp = require('yelp-fusion');
-const token = process.env.APIKEY;
-const client = yelp.client(token);
+const apikey = process.env.APIKEY;
+const client = yelp.client(apikey);
 
 require('./config/database');
 
@@ -27,14 +27,19 @@ app.use('/api/users', require('./routes/users'));
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-//utilizing api search functionality through server.js to simplify routing/eliminate need for extra components/utils
+//calling API restaurant search here to simplify code
 app.post('/api/search', function(req, res){
+  //have to define user to get location data for API
   const user = req.user;
+  //npm yelp-fusion package includes .search functionality to allow simpler API call
   client.search({
     location: `${user.city}, ${user.state}`,
+    //categories is a Yelp API search call to search businesses with specific class, i.e. restaurants
     categories: 'restaurants',
   }).then(response => {
+    //converts businesses into JSON
     const restaurants = response.jsonBody.businesses;
+    //below randomizes JSON restaurant results matching location to pick one 
     const restaurant = restaurants[Math.floor(Math.random()*restaurants.length)];
     res.send(restaurant);
   })
