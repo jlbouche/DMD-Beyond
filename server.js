@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const favicon = require('serve-favicon');
+const bodyParser = require('body-parser')
 const yelp = require('yelp-fusion');
 const apikey = process.env.APIKEY;
 const client = yelp.client(apikey);
@@ -15,6 +16,8 @@ const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build'))); // this allows express to find the build folder
@@ -27,15 +30,18 @@ app.use('/api/users', require('./routes/users'));
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-//calling API restaurant search here to simplify code
-app.post('/api/search', function(req, res){
-  //have to define user to get location data for API
-  const user = req.user;
+
+//API call function
+app.post('/api/restaurantsearch', function(req, res){
+  const location = req.body
+  console.log(location);
   //npm yelp-fusion package includes .search functionality to allow simpler API call
   client.search({
-    location: `${user.city}, ${user.state}`,
+    location: `${location.address}, ${location.city}, ${location.state}`,
     //categories is a Yelp API search call to search businesses with specific class, i.e. restaurants
     categories: 'restaurants',
+    //added additional filter to require being open at the time of call
+    open_now: true
   }).then(response => {
     //converts businesses into JSON
     const restaurants = response.jsonBody.businesses;
@@ -44,8 +50,6 @@ app.post('/api/search', function(req, res){
     res.send(restaurant);
   })
 })
-
-
 
 const port = process.env.PORT || 3001;
 

@@ -47,9 +47,7 @@ export default function ProfilePage({ user, handleLogout }) {
                 <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle' >
                 
                         <Grid.Column style={{ maxWidth: 450}}>
-                            
                                 <Loader size='large' active>Loading</Loader>
-                         
                         </Grid.Column>
                  
                 </Grid>
@@ -66,9 +64,6 @@ export default function ProfilePage({ user, handleLogout }) {
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row centered>
-                        <Grid.Column style={{ maxWidth: 750 }}>
-                            
-                        </Grid.Column>
                     </Grid.Row>
                 </Grid>
             }

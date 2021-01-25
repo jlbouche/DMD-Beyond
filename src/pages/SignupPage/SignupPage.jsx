@@ -14,7 +14,6 @@ export default function SignUpPage(props){
     email: '',
     password: '',
     passwordConf: '',
-    city: '',
     bio: ''
   });
 
@@ -101,22 +100,6 @@ export default function SignUpPage(props){
                       onChange={handleChange}
                       required
                     />
-                    <Form.Input     
-                      name="city"
-                      type="city"
-                      placeholder="city"
-                      value={ state.city}
-                      onChange={handleChange}
-                      required
-                    />
-                    <Form.Input     
-                      name="statecode"
-                      type="statecode"
-                      placeholder="State initials, i.e. CA, NY, WA, etc."
-                      value={ state.statecode}
-                      onChange={handleChange}
-                      required
-                    />
                     <Form.TextArea label='bio' placeholder='Tell us more about yourself!' name="bio" onChange={handleChange}/>
                     <Form.Field> 
                         <Form.Input
@@ -140,6 +123,5 @@ export default function SignUpPage(props){
             </Grid.Column>
           </Grid>
         </>
-      );   
-    
+      );       
 }
