@@ -3,7 +3,7 @@ import PageHeader from '../../components/Header/Header'
 import RestaurantForm from '../../components/RestaurantForm/RestaurantForm';
 import {  Grid } from 'semantic-ui-react'
 
-export default function HomePage({user, handleLogout}){
+export default function HomePage({user, handleLogout, restaurant}){
 
     return (
       <Grid centered >
