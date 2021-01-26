@@ -1,18 +1,39 @@
 import React from 'react';
-import {  Grid } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Image, Segment } from 'semantic-ui-react'
 
 export default function RestaurantForm(){
 
     return (
       <Grid>
       <Grid.Column style={{maxWidth: 450}}>
-              <form action="/api/restaurantsearch" method="post">
-                <input required name="address" type="text" placeholder="Street No. and Name"/><br />
-                <input required name="city" type="text" placeholder="City" /><br />
-                <input required name="state" type="text" placeholder="State initials: i.e. CA, NY, WA"/><br />
-                <input type="submit" value="HELP ME DECIDE" />
-              </form>
-            </Grid.Column>
+        <Form action="/api/restaurantsearch" method="post">
+          <Segment stacked>               
+            <Form.Input   
+              type="address"                 
+              name="address"
+              placeholder="Street No. and Name"
+              required
+            />
+            <Form.Input
+              type="city"                  
+              name="city"
+              placeholder="City"
+              required
+            />
+            <Form.Input             
+              name="state"
+              type="state"
+              placeholder="State initials: i.e. CA, NY, WA"
+              required
+            />
+            <Button
+              type="submit"
+              className="btn">
+            HELP ME DECIDE
+            </Button>
+          </Segment>
+        </Form>
+      </Grid.Column>
       </Grid>
     )
 }
