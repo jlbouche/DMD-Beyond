@@ -3,7 +3,7 @@ import PageHeader from '../../components/Header/Header'
 import RestaurantForm from '../../components/RestaurantForm/RestaurantForm';
 import RestaurantDisplay from '../../components/RestaurantDisplay/RestaurantDisplay';
 
-import {  Grid } from 'semantic-ui-react'
+import {  Grid, Card } from 'semantic-ui-react'
 import './HomePage.css';
 
 export default function HomePage({user, handleLogout, handleAddressChange, handleCityChange, handleStateCodeChange, handleSubmit, restaurant, address, city, stateCode}){
@@ -17,19 +17,9 @@ export default function HomePage({user, handleLogout, handleAddressChange, handl
             <PageHeader user={user} handleLogout={handleLogout}/>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row>
+        <Grid.Row columns={3}>
             <Grid.Column verticalAlign='middle' columns={1} style={{maxWidth: 450}}>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
+
               <RestaurantForm 
                 handleAddressChange={handleAddressChange} 
                 handleCityChange={handleCityChange} 
@@ -38,7 +28,9 @@ export default function HomePage({user, handleLogout, handleAddressChange, handl
                 address={address}
                 city={city}
                 stateCode={stateCode}/>
-                {restaurant ? <RestaurantDisplay restaurant={restaurant}/> : null }
+            </Grid.Column>
+            <Grid.Column>
+            {restaurant ? <RestaurantDisplay restaurant={restaurant}/> : null }
             </Grid.Column>
         </Grid.Row>
       </Grid>

@@ -9,7 +9,7 @@ export default function RestaurantDisplay({restaurant}){
                     <>
                     <h3>DMD has rolled a nat 20! You're going to:</h3>
                     <Card.Content>
-                     <Image src={`${restaurant.restaurant.image_url}`} />
+                     <Image src={restaurant.restaurant.image_url} />
                          {restaurant.restaurant.name}
                          {restaurant.restaurant.rating}{restaurant.restaurant.review_count}
                          {restaurant.restaurant.price}
