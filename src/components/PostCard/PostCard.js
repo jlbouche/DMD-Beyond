@@ -28,7 +28,6 @@ function PostCard({post, isProfile, user}) {
         </Card.Content>
       <Card.Content>
       <Card.Description>
-        {post.postTitle}
         {post.caption}
       </Card.Description>
       </Card.Content>
