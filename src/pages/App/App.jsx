@@ -32,10 +32,14 @@ function App() {
           {userService.getUser() ? 
             <>
                 <Route exact path="/">
+                  <div className="home">
                     <HomePage user={user} handleLogout={handleLogout}/>
+                  </div>
                 </Route>
                 <Route path="/:username">
+                  <div className="profile">
                   <ProfilePage user={user} handleLogout={handleLogout}/>
+                  </div>
                 </Route>
             </>
             :

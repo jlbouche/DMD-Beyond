@@ -25,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'build'))); // this allows express t
 app.use(require('./config/auth')); 
 // api routes must be before the "catch all" route
 app.use('/api/users', require('./routes/users'));
+app.use('/api/posts', require('./routes/posts'));
 
 // "catch all" route
 app.get('/*', function(req, res) {
@@ -47,7 +48,7 @@ app.post('/api/restaurantsearch', function(req, res){
     const restaurants = response.jsonBody.businesses;
     //below randomizes JSON restaurant results matching location to pick one 
     const restaurant = restaurants[Math.floor(Math.random()*restaurants.length)];
-    console.log(restaurant);
+    res.send(restaurant)
   })
 })
 

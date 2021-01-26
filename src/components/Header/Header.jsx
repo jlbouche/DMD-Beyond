@@ -5,13 +5,13 @@ import './Header.css';
 
 export default function PageHeader({user, handleLogout}){
     return (
-        <Segment clearing>
-            <Header as='h2' floated='right'>
+        <Segment clearing style={{height: 120}}>
+            <Header as='h2' floated='right' style={{height:100, width: 150}}>
                 <Link to={`/${user.username}`}><Image src={user.photoUrl ? user.photoUrl : "https://react.semantic-ui.com/images/wireframe/square-image.png"} avatar></Image></Link>                 
                 <Link to='' onClick={handleLogout} class="link">Logout</Link>
             </Header>
             <Header as='h2' floated='left'>
-                <Link to="/"><Image src="https://see.fontimg.com/api/renderfont4/JRw6B/eyJyIjoiZnMiLCJoIjozMiwidyI6MTAwMCwiZnMiOjMyLCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/RE1E/draconis.png"></Image></Link>
+                <Link to="/"><Image src="https://i.imgur.com/4kxGXSS.png" style={{height:100, width: 150}}></Image></Link>
             </Header>
         </Segment>
     )
