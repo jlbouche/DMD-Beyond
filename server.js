@@ -47,7 +47,7 @@ app.post('/api/restaurantsearch', function(req, res){
     const restaurants = response.jsonBody.businesses;
     //below randomizes JSON restaurant results matching location to pick one 
     const restaurant = restaurants[Math.floor(Math.random()*restaurants.length)];
-    res.send(restaurant);
+    console.log(restaurant);
   })
 })
 
