@@ -42,9 +42,14 @@ export default function LoginPage(props){
     return (
         <>
           <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
-            <Grid.Column style={{ maxWidth: 450 }}>
+            <Grid.Row></Grid.Row>
+            <Grid.Row centered >
+              <Image src="https://media2.giphy.com/media/U1UmXuHKIooeE6kwDB/giphy.gif" style={{height: 350}}/>
+            </Grid.Row>
+            <Grid.Row columns={3}>
+            <Grid.Column style={{ maxWidth: 450, height: 400 }}>
             <Header as='h2' color='red' textAlign='center'>
-            <Image src='https://miro.medium.com/max/265/1*rXDOgxfiljrdY1gS-YWEIg.png' /> Log-in to your account
+            <Image src='https://i.imgur.com/FMpEgJi.png' /> Log-in to your account
             </Header>
             <Form  autoComplete="off"  onSubmit={handleSubmit}>
                <Segment stacked>
@@ -80,6 +85,7 @@ export default function LoginPage(props){
             </Message>
             {error ? <ErrorMessage error={error} /> : null}
             </Grid.Column>
+            </Grid.Row>
           </Grid>
         </>
       );

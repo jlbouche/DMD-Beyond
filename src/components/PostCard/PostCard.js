@@ -21,8 +21,14 @@ function PostCard({post, isProfile, user}) {
         </Link>
       }
       <Image src={`${post.photoUrl}`} wrapped ui={false} />
+        <Card.Content>
+          <Card.Description>
+            {post.postTitle}
+          </Card.Description>
+        </Card.Content>
       <Card.Content>
       <Card.Description>
+        {post.postTitle}
         {post.caption}
       </Card.Description>
       </Card.Content>

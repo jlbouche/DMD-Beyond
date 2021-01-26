@@ -5,6 +5,7 @@ import { Button, Form, Segment } from 'semantic-ui-react'
 export default function AddFoodPic(props){
   const [selectedFile, setSelectedFile] = useState('')
   const [state, setState] = useState({
+    postTitle: '',
     caption: ''
   })
 
@@ -25,6 +26,7 @@ export default function AddFoodPic(props){
              
     const formData = new FormData()
     formData.append('photo', selectedFile)
+    formData.append('postTitle', state.postTitle)
     formData.append('caption', state.caption)
     props.handleAddPost(formData)
   }
@@ -37,6 +39,14 @@ export default function AddFoodPic(props){
         
             <Form  autoComplete="off" onSubmit={handleSubmit}>
             
+            <Form.Input
+                  className="form-control"
+                  name="postTitle"
+                  value={state.postTitle}
+                  placeholder="Where did you eat?"
+                  onChange={handleChange}
+                  required
+              />   
               <Form.Input
                   className="form-control"
                   name="caption"

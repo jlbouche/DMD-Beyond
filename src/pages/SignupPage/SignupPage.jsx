@@ -64,8 +64,8 @@ export default function SignUpPage(props){
         <>
         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
           <Grid.Column style={{ maxWidth: 450 }}>
-              <Header as='h2' color='teal' textAlign='center'>
-                <Image src='https://miro.medium.com/max/265/1*rXDOgxfiljrdY1gS-YWEIg.png' /> Sign Up    
+              <Header as='h2' color='red' textAlign='center'>
+                <Image src='https://i.imgur.com/FMpEgJi.png' /> Sign Up    
               </Header>            
                 <Form autoComplete="off"  onSubmit={handleSubmit}>
                 <Segment stacked>               
@@ -110,6 +110,8 @@ export default function SignUpPage(props){
                         />      
                     </Form.Field>
                     <Button
+                      color="red"
+                      fluid size='large'
                       type="submit"
                       className="btn"
                       disabled={invalidForm}

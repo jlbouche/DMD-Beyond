@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import PageHeader from '../../components/Header/Header'
 import RestaurantForm from '../../components/RestaurantForm/RestaurantForm';
+import RestaurantDisplay from '../../components/RestaurantDisplay/RestaurantDisplay';
+
 import {  Grid } from 'semantic-ui-react'
 import './HomePage.css';
 
-export default function HomePage({user, handleLogout}){
-
+export default function HomePage({user, handleLogout, handleAddressChange, handleCityChange, handleStateCodeChange, handleSubmit, restaurant, address, city, stateCode}){
     
 
     return (
@@ -29,7 +30,15 @@ export default function HomePage({user, handleLogout}){
               <br/>
               <br/>
               <br/>
-              <RestaurantForm />
+              <RestaurantForm 
+                handleAddressChange={handleAddressChange} 
+                handleCityChange={handleCityChange} 
+                handleStateCodeChange={handleStateCodeChange} 
+                handleSubmit={handleSubmit}
+                address={address}
+                city={city}
+                stateCode={stateCode}/>
+                {restaurant ? <RestaurantDisplay restaurant={restaurant}/> : null }
             </Grid.Column>
         </Grid.Row>
       </Grid>

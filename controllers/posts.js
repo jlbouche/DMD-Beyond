@@ -14,7 +14,7 @@ function create(req, res){
         const filePath = `${uuidv4()}/${req.file.originalname}`
         const params = {Bucket: 'jbcatcollector', Key: filePath, Body: req.file.buffer};
         s3.upload(params, async function(err, data){
-            const post = await Post.create({caption: req.body.caption, user: req.user, photoUrl: data.Location});
+            const post = await Post.create({postTitle: req.body.postTitle, caption: req.body.caption, user: req.user, photoUrl: data.Location});
             const populatedUserPost = await post.populate('user').execPopulate();
             res.status(201).json({post: populatedUserPost})
         })

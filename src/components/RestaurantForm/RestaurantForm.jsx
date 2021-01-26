@@ -1,47 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, initialState, useEffect } from 'react';
 import { Button, Form, Grid, Header, Image, Segment, Card } from 'semantic-ui-react'
-import restaurantService from '../../utils/restaurantService';
 import RestaurantDisplay from '../RestaurantDisplay/RestaurantDisplay'
 
+export default function RestaurantForm({handleAddressChange, handleCityChange, handleStateCodeChange, handleSubmit, restaurant, address, city, stateCode}){
 
-export default function RestaurantForm(){
-  
-  const [address, setAddress] = useState('')
-  const [city, setCity] = useState('')
-  const [stateCode, setStateCode] = useState('')
-  const [currentRestaurant, setCurrentRestaurant] = useState({})
+  // const [address, setAddress] = useState('')
+  // const [city, setCity] = useState('')
+  // const [stateCode, setStateCode] = useState('')
 
-  function handleAddressChange(e){
-    setAddress(e.target.value);
-  }
+  // function handleAddressChange(e){
+  //   setAddress(e.target.value);
+  // }
 
-  function handleCityChange(e){
-    setCity(e.target.value);
-  }
+  // function handleCityChange(e){
+  //   setCity(e.target.value);
+  // }
 
-  function handleStateCodeChange(e){
-    setStateCode( e.target.value);
-  }
+  // function handleStateCodeChange(e){
+  //   setStateCode( e.target.value);
+  // }
 
 
 
-  async function handleSubmit(e) {
-    e.preventDefault();
-    const currentLocation = {address: address, city: city, stateCode: stateCode};
-    console.log(currentLocation)
-    try {
-      // refer to the utils/restaurantService, to look at the getRestaurant fetch function
-      const restaurant = await restaurantService.getRestaurant(currentLocation);
-      // setCurrentRestaurant(restaurant);
-    } catch(err){
-      console.log(err.message)
-    }
-  };
+  // async function handleSubmit(e) {
+  //   e.preventDefault();
+  //   const currentLocation = {address: address, city: city, stateCode: stateCode};
+  //   console.log(currentLocation)
+  //   try {
+  //     // refer to the utils/restaurantService, to look at the getRestaurant fetch function
+  //     const restaurant = await restaurantService.getRestaurant(currentLocation);
+  //   } catch(err){
+  //     console.log(err.message)
+  //   }
+  // };
 
     return (
-      <Grid>
-      <Grid.Column style={{maxWidth: 450}}>
-        <Form onSubmit={handleSubmit}>
+      <div>
+        <Form style={{maxWidth: 450}} onSubmit={handleSubmit}>
           <Segment stacked>               
             <Form.Input   
               type="address"                 
@@ -75,7 +70,6 @@ export default function RestaurantForm(){
             </Button>
           </Segment>
         </Form>
-      </Grid.Column>
-      </Grid>
+      </div>
     )
 }
