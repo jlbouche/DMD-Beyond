@@ -17,7 +17,7 @@ export default function HomePage({user, handleLogout, handleAddressChange, handl
             <PageHeader user={user} handleLogout={handleLogout}/>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row columns={3}>
+        <Grid.Row columns={3} class="ui container">
             <Grid.Column verticalAlign='middle' columns={1} style={{maxWidth: 450}}>
 
               <RestaurantForm 

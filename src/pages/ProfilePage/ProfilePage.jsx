@@ -45,7 +45,6 @@ export default function ProfilePage({ user, handleLogout }) {
             const data = await userService.getProfile(username);
             console.log(data)
             setLoading(() => false)
-            // setPosts(() => [...data.posts])
             setProfileUser(() => data.user)
         } catch (err) {
             console.log(err)
@@ -65,14 +64,10 @@ export default function ProfilePage({ user, handleLogout }) {
 
         <>
             { loading ?
-                <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle' >
-                
-                        <Grid.Column style={{ maxWidth: 450}}>
-                            
-                                <Loader size='large' active>Loading</Loader>
-                         
-                        </Grid.Column>
-                 
+                <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle' >                
+                    <Grid.Column style={{ maxWidth: 450}}>                            
+                            <Loader size='large' active>Loading</Loader>                         
+                    </Grid.Column>
                 </Grid>
                 :
                 <Grid >
@@ -85,10 +80,9 @@ export default function ProfilePage({ user, handleLogout }) {
                         <Grid.Column style={{ maxWidth: 450}}>
                             <ProfileBio user={profileUser} />
                             <AddFoodPic handleAddPost={handleAddPost}/>
-
                         </Grid.Column>
                         <Grid.Column style={{ maxWidth: 750 }}>
-                            <PostFeed isProfile={true} posts={posts} numPhotosCol={3} user={user} />
+                            <PostFeed posts={posts} numPhotosCol={3} user={user} />
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>

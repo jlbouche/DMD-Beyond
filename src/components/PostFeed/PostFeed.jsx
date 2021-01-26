@@ -10,7 +10,7 @@ export default function PostFeed({posts, isProfile, numPhotosCol, user}){
            
                 {posts.map((post) => {
                 return ( 
-                        <PostCard post={post} key={post._id} isProfile={isProfile} user={user}/>
+                        <PostCard post={post} isProfile={isProfile} user={user}/>
                     )
                 })}
         </Card.Group>

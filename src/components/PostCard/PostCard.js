@@ -1,36 +1,19 @@
 import React from 'react';
-import { Card, Icon, Image, Feed } from 'semantic-ui-react'
-import { Link } from 'react-router-dom';
+import { Card, Icon, Image } from 'semantic-ui-react'
 
 function PostCard({post, isProfile, user}) { 
 
   return (
-    <Card key={post._id}>
-     {isProfile ? ''
-        :  
-        <Link to={`/${user.username}`}>
-          <Card.Content textAlign='left'>
-              <Image
-                  floated='left'
-                  size='large'
-                  avatar
-                  src={post.user.photoUrl ? post.user.photoUrl : 'https://react.semantic-ui.com/images/wireframe/square-image.png'}
-              />
-              <Card.Header floated="right">{post.user.username}</Card.Header>
-          </Card.Content>
-        </Link>
-      }
-      <Image src={`${post.photoUrl}`} wrapped ui={false} />
+    <Card style={{width: 300, height: 300}} class="ui container center aligned">
         <Card.Content>
-          <Card.Description>
+        <Card.Header>
+            <img src={`${post.photoUrl}`} height={180} width={270}/>
             {post.postTitle}
-          </Card.Description>
+        </Card.Header>
+        <Card.Meta>
+            {post.caption}
+        </Card.Meta>
         </Card.Content>
-      <Card.Content>
-      <Card.Description>
-        {post.caption}
-      </Card.Description>
-      </Card.Content>
     </Card>
   );
 }

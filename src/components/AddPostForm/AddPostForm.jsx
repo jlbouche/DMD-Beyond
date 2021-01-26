@@ -35,7 +35,7 @@ export default function AddFoodPic(props){
   return (
     
   
-        <Segment>
+        <Segment style={{height: 250, width: 350}} class="ui container center aligned">
         
             <Form  autoComplete="off" onSubmit={handleSubmit}>
             
@@ -63,6 +63,7 @@ export default function AddFoodPic(props){
                 onChange={handleFileInput}
               />   
               <Button
+                color="red"
                 type="submit"
                 className="btn"
               >
