@@ -2,9 +2,13 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import { Button, Form, Grid, Icon, Image, Segment, Card } from 'semantic-ui-react'
 
-export default function RestaurantDisplay({restaurant}){
+export default function RestaurantDisplay({handleSubmit, restaurant}){
     console.log('restaurantDisplay', restaurant)
     
+    const refreshPage = ()=>{
+        window.location.reload();
+    }
+
     return (
         <>
         <div>
@@ -28,6 +32,12 @@ export default function RestaurantDisplay({restaurant}){
                             {restaurant.restaurant.rating}
                      </Card.Content>
         </Card>
+        <Button 
+            type="submit" 
+            className="btn" 
+            color="red" 
+            content='Search again?'
+            onClick={refreshPage}/>
         </>
     )
 }

@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className="App">
-        {console.log('this is the restaurant', restaurant)}
+        {console.log('this is the restaurant',restaurant)}
       <Switch>
           <Route exact path="/login">
             <div className="login">
