@@ -11,3 +11,15 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size:larger
 }
+
+.signup {
+    background-color: #E8E5DC;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }

@@ -17,19 +17,22 @@ export default function HomePage({user, handleLogout, handleAddressChange, handl
             <PageHeader user={user} handleLogout={handleLogout}/>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row columns={3} class="ui container">
-            <Grid.Column verticalAlign='middle' columns={1} style={{maxWidth: 450}}>
+          <Image src="https://i.imgur.com/QpBVnrP.png" />
+        <Grid.Row columns={1} class="ui container">
+            <Grid.Column verticalAlign='middle' columns={2} style={{maxWidth: 450}}>
 
-              <RestaurantForm 
-                handleAddressChange={handleAddressChange} 
+              {restaurant ? null : <RestaurantForm handleAddressChange={handleAddressChange} 
                 handleCityChange={handleCityChange} 
                 handleStateCodeChange={handleStateCodeChange} 
                 handleSubmit={handleSubmit}
                 address={address}
                 city={city}
                 stateCode={stateCode}/>
+                }
             </Grid.Column>
-            <Grid.Column>
+        </Grid.Row>
+        <Grid.Row columns={1} class="ui container">
+            <Grid.Column verticalAlign='middle' columns={2} style={{maxWidth: 450}}>
             {restaurant ? <RestaurantDisplay restaurant={restaurant}/> : null }
             </Grid.Column>
         </Grid.Row>

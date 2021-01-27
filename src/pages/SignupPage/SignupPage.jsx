@@ -64,9 +64,10 @@ export default function SignUpPage(props){
     return (
         <>
         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
-          <Grid.Column style={{ maxWidth: 450 }}>
+          <Grid.Column col={3} style={{ maxWidth: 450 }}>
               <Header as='h2' color='red' textAlign='center'>
                 <Image src='https://i.imgur.com/FMpEgJi.png' /><span class="signuptext">Signup</span>  
+                <Image src='https://media2.giphy.com/media/KfxPgR9Xb6lRvlFa8x/source.gif' style={{height: 100, width: 150}} floated='right'/>
               </Header>            
                 <Form autoComplete="off"  onSubmit={handleSubmit}>
                 <Segment stacked>               
