@@ -6,7 +6,7 @@ export default function RestaurantForm({handleAddressChange, handleCityChange, h
 
     return (
       <div>
-        <h3>Ready to roll the dice on dinner?</h3>
+        <h3>Ready to roll the dice?</h3>
         <Form style={{maxWidth: 450}} onSubmit={handleSubmit} >
           <Segment stacked>               
             <Form.Input   

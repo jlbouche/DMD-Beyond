@@ -17,10 +17,8 @@ export default function HomePage({user, handleLogout, handleAddressChange, handl
             <PageHeader user={user} handleLogout={handleLogout}/>
           </Grid.Column>
         </Grid.Row>
-          <Image src="https://i.imgur.com/QpBVnrP.png" />
         <Grid.Row columns={1} class="ui container">
             <Grid.Column verticalAlign='middle' columns={2} style={{maxWidth: 450}}>
-
               {restaurant ? null : <RestaurantForm handleAddressChange={handleAddressChange} 
                 handleCityChange={handleCityChange} 
                 handleStateCodeChange={handleStateCodeChange} 
@@ -36,6 +34,7 @@ export default function HomePage({user, handleLogout, handleAddressChange, handl
             {restaurant ? <RestaurantDisplay restaurant={restaurant}/> : null }
             </Grid.Column>
         </Grid.Row>
+        <Image src="https://i.imgur.com/QpBVnrP.png" />
       </Grid>
       </div>
     )
