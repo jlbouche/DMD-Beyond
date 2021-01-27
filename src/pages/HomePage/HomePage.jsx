@@ -3,7 +3,7 @@ import PageHeader from '../../components/Header/Header'
 import RestaurantForm from '../../components/RestaurantForm/RestaurantForm';
 import RestaurantDisplay from '../../components/RestaurantDisplay/RestaurantDisplay';
 
-import {  Grid, Card } from 'semantic-ui-react'
+import {  Grid, Image, Card } from 'semantic-ui-react'
 import './HomePage.css';
 
 export default function HomePage({user, handleLogout, handleAddressChange, handleCityChange, handleStateCodeChange, handleSubmit, restaurant, address, city, stateCode}){

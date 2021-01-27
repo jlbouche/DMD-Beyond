@@ -14,6 +14,5 @@ export default function PostFeed({posts, isProfile, numPhotosCol, user}){
                     )
                 })}
         </Card.Group>
-  
     )
 }

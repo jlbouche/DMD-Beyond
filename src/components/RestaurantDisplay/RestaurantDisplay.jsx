@@ -7,7 +7,10 @@ export default function RestaurantDisplay({restaurant}){
     
     return (
         <>
-        <Card style={{width: 300, height: 300}} class="ui container center aligned">           
+        <div>
+            <h3>DMD rolled a natural 20! You're going to: </h3>
+        </div>
+        <Card style={{width: 345, height: 300}} class="ui container center aligned">           
                     <Card.Content>
                         <Card.Header>
                             <img src={restaurant.restaurant.image_url} height={180} width={270}/><br/>

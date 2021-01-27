@@ -1,5 +1,5 @@
 import React, { useState, initialState, useEffect } from 'react';
-import { Button, Form, Grid, Header, Image, Segment, Card } from 'semantic-ui-react'
+import { Button, Form, Popup, Grid, Header, Image, Segment, Card } from 'semantic-ui-react'
 import RestaurantDisplay from '../RestaurantDisplay/RestaurantDisplay'
 
 export default function RestaurantForm({handleAddressChange, handleCityChange, handleStateCodeChange, handleSubmit, restaurant, address, city, stateCode}){
@@ -7,7 +7,7 @@ export default function RestaurantForm({handleAddressChange, handleCityChange, h
     return (
       <div>
         <h3>Ready to roll the dice on dinner?</h3>
-        <Form style={{maxWidth: 450}} onSubmit={handleSubmit}>
+        <Form style={{maxWidth: 450}} onSubmit={handleSubmit} >
           <Segment stacked>               
             <Form.Input   
               type="address"                 
@@ -33,12 +33,16 @@ export default function RestaurantForm({handleAddressChange, handleCityChange, h
               required
               onChange={handleStateCodeChange}
             />
-            <Button
-              type="submit"
-              className="btn"
-            >
-            HELP ME DECIDE
-            </Button>
+            <Popup
+              trigger={
+                <Button type="submit" className="btn" color="red" content='Decide my dinner!'/>
+                }
+                content={<Image src="https://media3.giphy.com/media/3oriNPdeu2W1aelciY/giphy.gif"/>}
+                on='hover'
+                mouseEnterDelay={800}
+                mouseLeaveDelay={500}
+                position='top right'
+            />
           </Segment>
         </Form>
       </div>

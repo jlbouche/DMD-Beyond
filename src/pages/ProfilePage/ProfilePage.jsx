@@ -81,9 +81,11 @@ export default function ProfilePage({ user, handleLogout }) {
                             <ProfileBio user={profileUser} />
                             <AddFoodPic handleAddPost={handleAddPost}/>
                         </Grid.Column>
+                        <Grid.Row>
                         <Grid.Column style={{ maxWidth: 750 }}>
                             <PostFeed posts={posts} numPhotosCol={3} user={user} />
                         </Grid.Column>
+                        </Grid.Row>
                     </Grid.Row>
                 </Grid>
             }

@@ -29,7 +29,7 @@
 }
 
 .home {
-  background-image: url("");
+  background-color: #E8E5DC;  
   background-size: cover;
   position: fixed;
   top: 0;
@@ -41,9 +41,7 @@
 }
 
 .profile {
-  background-image: url("");
-  background-size: auto;
-  position: fixed;
+  background-color: #E8E5DC;
   top: 0;
   left: 0;
   right: 0;
