@@ -7,7 +7,15 @@ Create a profile, save images/thoughts on your experience, and find those new re
 
 [Deployed app](https://dmdbeyond.herokuapp.com/)
 
+ 
+
 ## Screenshots
+
+<details>
+<summary>
+</summary>
+
+<br>
 
 Signup:
 ![signup](https://i.imgur.com/27D5LGZ.png)
@@ -23,6 +31,8 @@ DMD search results:
 
 Profile, where you can post pics and feedback about your experience to review later:
 ![profile](https://i.imgur.com/5KhQhQw.png)
+
+</details>
 
 ## Technologies used
 
