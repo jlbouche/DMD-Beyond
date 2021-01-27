@@ -23,7 +23,9 @@ export default function RestaurantDisplay({handleSubmit, restaurant}){
                         <Card.Meta>
                             {restaurant.restaurant.categories.alias}
                             {restaurant.restaurant.location.address1}<br/>
-                            {restaurant.restaurant.location.city}{restaurant.restaurant.location.zip_code}
+                            {restaurant.restaurant.location.city}, 
+                            {restaurant.restaurant.location.state}, 
+                            {restaurant.restaurant.location.zip_code}
                         </Card.Meta>
                      </Card.Content>
                      <Card.Content extra>
