@@ -6,3 +6,8 @@
 .link:hover{
     color: #990F02;
 }
+
+.signuptext {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:larger
+}

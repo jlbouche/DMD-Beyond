@@ -44,12 +44,12 @@ export default function LoginPage(props){
           <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
             <Grid.Row></Grid.Row>
             <Grid.Row centered >
-              <Image src="https://media2.giphy.com/media/U1UmXuHKIooeE6kwDB/giphy.gif" style={{height: 350}}/>
+              <Image src="https://media2.giphy.com/media/U1UmXuHKIooeE6kwDB/giphy.gif" style={{height: 250}}/>
             </Grid.Row>
             <Grid.Row columns={3}>
             <Grid.Column style={{ maxWidth: 450, height: 400 }}>
             <Header as='h2' color='red' textAlign='center'>
-            <Image src='https://i.imgur.com/FMpEgJi.png' /> Log-in to your account
+              <Image src='https://i.imgur.com/FMpEgJi.png' /><span class="logintext">Login to DMD</span>
             </Header>
             <Form  autoComplete="off"  onSubmit={handleSubmit}>
                <Segment stacked>
@@ -76,7 +76,7 @@ export default function LoginPage(props){
                   className="btn"
                   disabled={invalidForm}
                 >
-                  Login
+                  <span class="logintext">Login</span>
                 </Button>
               </Segment>
             </Form>
