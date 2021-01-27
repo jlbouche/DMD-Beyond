@@ -29,6 +29,10 @@ export default function AddFoodPic(props){
     formData.append('postTitle', state.postTitle)
     formData.append('caption', state.caption)
     props.handleAddPost(formData)
+    setState({
+        postTitle: '',
+        caption: ''
+    })
   }
 
 

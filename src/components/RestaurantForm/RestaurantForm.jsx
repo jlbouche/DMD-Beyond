@@ -39,7 +39,7 @@ export default function RestaurantForm({handleAddressChange, handleCityChange, h
                 }
                 content={<Image src="https://media3.giphy.com/media/3oriNPdeu2W1aelciY/giphy.gif"/>}
                 on='hover'
-                mouseEnterDelay={800}
+                mouseEnterDelay={200}
                 mouseLeaveDelay={500}
                 position='top right'
             />
